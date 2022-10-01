@@ -38,15 +38,15 @@ app.post("/api/notes", function (req, res) {
     };
 
     readAndAppend(newNote, './db/db.json');
-    res.json(`Note added successfully 🚀`);
+    res.json(`note worked`);
   } else {
-    res.error('Error in adding note');
+    res.error('note did not work');
   }
 });
 app.delete("/api/notes/:id", function (req, res) {
 
     readAndDelete('./db/db.json', req.params.id);
-    res.json(`Note deleted successfully 🚀`);
+    res.json(`note deleted`);
 
 });
 
